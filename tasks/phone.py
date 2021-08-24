@@ -17,3 +17,25 @@
 Модель: {}
 Год выпуска: {}
 """
+
+
+class Phone:
+    brand: str
+    model: str
+    issue_year: int
+
+    def __init__(self, brand: str, model: str, issue_year: int):
+        self.brand = brand
+        self.model = model
+        self.issue_year = issue_year
+
+    @staticmethod
+    def receive_call(name: str):
+        print(f"Звонит {name}")
+
+    def get_info(self):
+        return self.brand, self.model, self.issue_year
+
+    def __str__(self):
+        enter = '\n'
+        return f"Бренд: {self.brand}{enter}Модель: {self.model}{enter}Год выпуска: {self.issue_year}"
